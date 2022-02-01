@@ -55,7 +55,7 @@ class BasicDataset(Dataset):
 
     def __getitem__(self, idx):
         name = self.ids[idx]
-        mask_file = list(self.masks_dir.glob(name + self.mask_suffix + '.*'))
+        mask_file = list(self.masks_dir.glob(name + '.*'))
         img_file = list(self.images_dir.glob(name + '.*'))
         
         print('name :', name)
